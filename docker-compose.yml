@@ -11,6 +11,7 @@ services:
       restart: always
       build: ./rabbit
    nginx:
+      container_name: balancer
       build: ./nginx
       restart: always
       ports:
