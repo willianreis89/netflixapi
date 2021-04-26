@@ -12,9 +12,9 @@ services:
       container_name: rabbitmq
       restart: always
       build: ./rabbit
-      ports:
-         - "5672:5672"
-         - "15672:15672"
+      # ports:
+      #    - "5672:5672"
+      #    - "15672:15672"
    nginx:
       build: ./nginx
       restart: always
@@ -27,14 +27,14 @@ services:
       container_name: redis
       restart: always
       build: ./redis1
-      ports:
-      - "6379:6379"
+      # ports:
+      # - "6379:6379"
    redis2:
       container_name: redis2
       restart: always
       build: ./redis2
-      ports:
-      - "6380:6379"
+      # ports:
+      # - "6380:6379"
    app1:
       container_name: netflixapi
       build: ./app1
