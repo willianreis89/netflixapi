@@ -1,0 +1,16 @@
+Descritivo
+
+Aplicação:
+ - Dois containers executando a aplicação espelhada
+ - Cada container possui um sidecar com o Redis para cache de informações
+ 	relevantes somentes em tempo de execução
+
+DB:
+ - Postgres para persistencia e consulta de dados
+
+Rabbit:
+ - Os dois containers contendo a aplicação trabalham com troca de messageria de forma
+ 	assíncrona utilizando filas e armazenam as informações trocas no Redis
+
+Redis:
+ - Faz o papel de cache entre os containers
